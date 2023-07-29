@@ -1,6 +1,5 @@
 import './App.css'
 import BrandName from './componets/BrandName'
-import Cards from './componets/Card/Cards'
 import SearchBar from './componets/SearchBar'
 
 
@@ -10,7 +9,6 @@ function App() {
     <>
       <BrandName/>
       <SearchBar/>
-      <Cards/>
     </>
   )
 }

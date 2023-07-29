@@ -1,12 +1,11 @@
 import React, { useState } from "react";
 
-function Card(props) {
+function Card({ heading }) {
   const [done, setDone] = useState("pending");
   const [card, setCard] = useState(true);
 
   function updateStatus() {
-    if (done === "pending") return setDone("Complete");
-      return setDone("pending");
+    setDone(done === "pending" ? "Complete" : "pending");
   }
 
   function removeCard() {
@@ -16,7 +15,7 @@ function Card(props) {
   if (card) {
     return (
       <div className="Card">
-        <h2>{props.heading}</h2>
+        <h2>{heading}</h2>
         <h3>Status: {done}</h3>
         <button className="btn" onClick={updateStatus}>
           Update Status
