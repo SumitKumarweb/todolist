@@ -13,7 +13,7 @@ function SearchBar() {
         const trimmedHeading = listCard.trim();
 
         if (trimmedHeading === "") {
-            return;  
+            return;
         }
 
         setCardItem((prevCardItems) => [
@@ -40,7 +40,11 @@ function SearchBar() {
             <div className="Cards">
                 {
                     cardItem.map((card, index) => (
-                        <Card key={index} heading={card.heading} />
+                        <Card
+                            key={index}
+                            number={index + 1}
+                            heading={card.heading}
+                        />
                     ))}
             </div>
         </>
